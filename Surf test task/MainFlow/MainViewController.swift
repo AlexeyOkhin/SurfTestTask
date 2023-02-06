@@ -15,7 +15,7 @@ final class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .tintColor
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "MainBackGround")!)
     }
     //MARK: - Methods
 
