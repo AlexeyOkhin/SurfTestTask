@@ -64,6 +64,14 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		0CCE83802992C4D900A5389A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0CCE83712992B0B300A5389A /* VacancyModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0CFD2F77298C25D6008E2AB3 = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +111,8 @@
 		0CFD2F98298C2870008E2AB3 /* MainFlow */ = {
 			isa = PBXGroup;
 			children = (
+				0CCE83802992C4D900A5389A /* Model */,
 				0CFD2F87298C25D6008E2AB3 /* MainViewController.swift */,
-				0CCE83712992B0B300A5389A /* VacancyModel.swift */,
 			);
 			path = MainFlow;
 			sourceTree = "<group>";
