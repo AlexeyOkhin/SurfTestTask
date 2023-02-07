@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CCE83722992B0B300A5389A /* VacancyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCE83712992B0B300A5389A /* VacancyModel.swift */; };
+		0CCE83762992BFBD00A5389A /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCE83752992BFBD00A5389A /* UIColor + Extension.swift */; };
+		0CCE83792992BFFD00A5389A /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCE83782992BFFD00A5389A /* UILabel + Extension.swift */; };
+		0CCE837C2992C03600A5389A /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCE837B2992C03600A5389A /* UIButton + Extension.swift */; };
+		0CCE837E2992C0D700A5389A /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCE837D2992C0D700A5389A /* Resources.swift */; };
 		0CFD2F84298C25D6008E2AB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFD2F83298C25D6008E2AB3 /* AppDelegate.swift */; };
 		0CFD2F86298C25D6008E2AB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFD2F85298C25D6008E2AB3 /* SceneDelegate.swift */; };
 		0CFD2F88298C25D6008E2AB3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFD2F87298C25D6008E2AB3 /* MainViewController.swift */; };
@@ -15,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CCE83712992B0B300A5389A /* VacancyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyModel.swift; sourceTree = "<group>"; };
+		0CCE83752992BFBD00A5389A /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		0CCE83782992BFFD00A5389A /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
+		0CCE837B2992C03600A5389A /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
+		0CCE837D2992C0D700A5389A /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		0CFD2F80298C25D6008E2AB3 /* Surf test task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Surf test task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CFD2F83298C25D6008E2AB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CFD2F85298C25D6008E2AB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +45,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CCE83732992BF8B00A5389A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0CCE83742992BF9C00A5389A /* UIKit */,
+				0CCE837D2992C0D700A5389A /* Resources.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0CCE83742992BF9C00A5389A /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				0CCE83752992BFBD00A5389A /* UIColor + Extension.swift */,
+				0CCE83782992BFFD00A5389A /* UILabel + Extension.swift */,
+				0CCE837B2992C03600A5389A /* UIButton + Extension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		0CFD2F77298C25D6008E2AB3 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +83,7 @@
 		0CFD2F82298C25D6008E2AB3 /* Surf test task */ = {
 			isa = PBXGroup;
 			children = (
+				0CCE83732992BF8B00A5389A /* Extensions */,
 				0CFD2F97298C2859008E2AB3 /* Application */,
 				0CFD2F99298C2903008E2AB3 /* SupportingFiles */,
 				0CFD2F98298C2870008E2AB3 /* MainFlow */,
@@ -74,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				0CFD2F87298C25D6008E2AB3 /* MainViewController.swift */,
+				0CCE83712992B0B300A5389A /* VacancyModel.swift */,
 			);
 			path = MainFlow;
 			sourceTree = "<group>";
@@ -161,6 +192,11 @@
 				0CFD2F88298C25D6008E2AB3 /* MainViewController.swift in Sources */,
 				0CFD2F84298C25D6008E2AB3 /* AppDelegate.swift in Sources */,
 				0CFD2F86298C25D6008E2AB3 /* SceneDelegate.swift in Sources */,
+				0CCE837C2992C03600A5389A /* UIButton + Extension.swift in Sources */,
+				0CCE83722992B0B300A5389A /* VacancyModel.swift in Sources */,
+				0CCE837E2992C0D700A5389A /* Resources.swift in Sources */,
+				0CCE83792992BFFD00A5389A /* UILabel + Extension.swift in Sources */,
+				0CCE83762992BFBD00A5389A /* UIColor + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
