@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C1EAC302993FABC009F061F /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1EAC2F2993FABC009F061F /* BottomView.swift */; };
+		0C1EAC3229941C9F009F061F /* UpLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1EAC3129941C9F009F061F /* UpLineCell.swift */; };
 		0CCE83722992B0B300A5389A /* VacancyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCE83712992B0B300A5389A /* VacancyModel.swift */; };
 		0CCE83762992BFBD00A5389A /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCE83752992BFBD00A5389A /* UIColor + Extension.swift */; };
 		0CCE83792992BFFD00A5389A /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CCE83782992BFFD00A5389A /* UILabel + Extension.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		0C1EAC2F2993FABC009F061F /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		0C1EAC3129941C9F009F061F /* UpLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpLineCell.swift; sourceTree = "<group>"; };
 		0CCE83712992B0B300A5389A /* VacancyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyModel.swift; sourceTree = "<group>"; };
 		0CCE83752992BFBD00A5389A /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		0CCE83782992BFFD00A5389A /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 		0C1EAC2D2993FA1B009F061F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				0C1EAC3129941C9F009F061F /* UpLineCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				0CFD2F88298C25D6008E2AB3 /* MainViewController.swift in Sources */,
 				0CFD2F84298C25D6008E2AB3 /* AppDelegate.swift in Sources */,
 				0CFD2F86298C25D6008E2AB3 /* SceneDelegate.swift in Sources */,
+				0C1EAC3229941C9F009F061F /* UpLineCell.swift in Sources */,
 				0CCE837C2992C03600A5389A /* UIButton + Extension.swift in Sources */,
 				0CCE83722992B0B300A5389A /* VacancyModel.swift in Sources */,
 				0CCE837E2992C0D700A5389A /* Resources.swift in Sources */,
