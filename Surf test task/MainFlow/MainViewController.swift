@@ -35,7 +35,7 @@ final class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setConstreints()
+        setConstraints()
     }
     //MARK: - Methods
 
@@ -49,7 +49,7 @@ final class MainViewController: UIViewController {
 
 private extension MainViewController {
 
-    func setConstreints() {
+    func setConstraints() {
         view.addSubview(backImageView)
         backImageView.translatesAutoresizingMaskIntoConstraints = false
 
