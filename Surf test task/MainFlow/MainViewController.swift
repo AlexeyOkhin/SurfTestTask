@@ -20,13 +20,16 @@ final class MainViewController: UIViewController {
         return imageView
     }()
     
-    private let textLabel: UILabel = {
-        let label = UILabel()
-        label.font = Resources.Font.descriptionText
-        label.textColor = Resources.Color.descriptionText
-        return label
-    }()
-    private let sendButton = UIButton()
+    private let textLabel = UILabel(
+                                    name: "Хочешь к нам?",
+                                    font: Resources.Font.descriptionText,
+                                    textColor: Resources.Color.descriptionText)
+    
+    private let sendButton = UIButton(
+                                    title: "Отправить заявку",
+                                    backgroundCollor: Resources.Color.buttonSend,
+                                    titleColor: .white,
+                                    cornerRadius: 30)
 
     //MARK: - Lifi Cycle
 
@@ -55,6 +58,17 @@ private extension MainViewController {
             backImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             backImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             backImageView.heightAnchor.constraint(equalToConstant: view.bounds.height / 1.4)
+        ])
+
+        let bottomView = ButtonFormView(label: textLabel, button: sendButton)
+        bottomView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bottomView)
+
+        NSLayoutConstraint.activate([
+            bottomView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            bottomView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            bottomView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            bottomView.heightAnchor.constraint(equalToConstant: 160)
         ])
     }
 }
