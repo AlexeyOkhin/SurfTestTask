@@ -11,12 +11,19 @@ final class UpLineCell: UICollectionViewCell {
 
     static let idenifire = "\(UpLineCell.self)"
 
-    var didThemeTapped: (() -> Void)?
-
     override var isSelected: Bool {
         didSet {
+            if isSelectedCell {
+                isSelectedCell = false
+            } else {
+                isSelectedCell = isSelected
+            }
+        }
+    }
+
+    private var isSelectedCell: Bool = false {
+        didSet {
             updateCell()
-            didThemeTapped?()
         }
     }
 
@@ -39,18 +46,22 @@ final class UpLineCell: UICollectionViewCell {
     private lazy var labelTitle: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.font = Resources.Font.buttonText
+        label.font = Resources.Font.titleCellText
         label.textColor = Resources.Color.buttonSend
         return label
     }()
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        labelTitle.text = nil
+        mainContainer.backgroundColor = Resources.Color.cellDisableColor
+    }
 
     private func configureCell() {
         mainContainer.clipsToBounds = true
         mainContainer.layer.cornerRadius = 12
         mainContainer.backgroundColor = Resources.Color.cellDisableColor
-
         makeConstraint()
-        updateCell()
     }
 
     private func makeConstraint() {
@@ -69,18 +80,23 @@ final class UpLineCell: UICollectionViewCell {
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            labelTitle.leadingAnchor.constraint(equalTo: mainContainer.leadingAnchor, constant: 8),
-            labelTitle.centerYAnchor.constraint(equalTo: mainContainer.centerYAnchor),
-            labelTitle.trailingAnchor.constraint(equalTo: mainContainer.trailingAnchor, constant: -8)
+            labelTitle.topAnchor.constraint(equalTo: mainContainer.topAnchor, constant: 8),
+            labelTitle.leadingAnchor.constraint(equalTo: mainContainer.leadingAnchor, constant: 18),
+            labelTitle.trailingAnchor.constraint(equalTo: mainContainer.trailingAnchor, constant: -18),
+            labelTitle.bottomAnchor.constraint(equalTo: mainContainer.bottomAnchor, constant: -8)
         ])
+
+        for i in 0..<contentView.constraints.count {
+           contentView.constraints[i].priority = .init(999)
+        }
     }
 
     private func updateCell() {
 
         UIView.animate(withDuration: 0.4) {
-            self.mainContainer.backgroundColor = self.isSelected ? Resources.Color.cellDisableColor : Resources.Color.cellEnableColor
-            self.labelTitle.textColor = self.isSelected ? Resources.Color.buttonSend : .white
 
+            self.mainContainer.backgroundColor = self.isSelectedCell ? Resources.Color.cellEnableColor : Resources.Color.cellDisableColor
+            self.labelTitle.textColor = self.isSelectedCell ? .white : Resources.Color.buttonSend
         }
     }
 
@@ -98,6 +114,7 @@ final class UpLineCell: UICollectionViewCell {
     func configure(model: VacancyModel) {
         labelTitle.text = model.name
     }
+    
 
 }
 
