@@ -19,5 +19,6 @@ extension UIButton {
         self.backgroundColor = backgroundCollor
         self.titleLabel?.font = font
         self.layer.cornerRadius = cornerRadius
+        self.contentEdgeInsets = .init(top: 20, left: 40, bottom: 20, right: 40)
     }
 }
