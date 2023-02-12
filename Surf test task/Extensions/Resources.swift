@@ -18,7 +18,8 @@ enum Resources {
     }
 
     enum Font {
-        static var titleText = UIFont.systemFont(ofSize: 24, weight: .medium)
+        static var titleText = UIFont.systemFont(ofSize: 24, weight: .bold)
+        static var titleCellText = UIFont.systemFont(ofSize: 14)
         static var buttonText = UIFont.boldSystemFont(ofSize: 16)
         static var descriptionText = UIFont.systemFont(ofSize: 14, weight: .light)
     }
