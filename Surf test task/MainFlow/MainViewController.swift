@@ -55,6 +55,11 @@ final class MainViewController: UICollectionViewController {
         createSectionsData()
         setElements()
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.collectionView.scrollToItem(at: IndexPath(item: 50, section: 0), at: .left, animated: false)
+    }
 }
 
 //MARK: - Methods Layout
@@ -100,9 +105,11 @@ extension MainViewController {
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(1.0))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
 
+
         group.interItemSpacing = .fixed(8)
 
         let section = NSCollectionLayoutSection(group: group)
+        //section.orthogonalScrollingBehavior = .continuous
 
 
         section.contentInsets = .init(top: 16, leading: 16, bottom: 16, trailing: 16)
@@ -188,7 +195,12 @@ extension MainViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        sections[section].count
+
+        switch section {
+        case 0 : return 1000
+        default:
+            return sections[section].count
+        }
     }
 
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -211,7 +223,8 @@ extension MainViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UpLineCell.idenifire, for: indexPath)
-        let model = sections[indexPath.section][indexPath.row]
+
+        let model = sections[indexPath.section][indexPath.row % sections[indexPath.section].count]
 
         (cell as? UpLineCell)?.configure(model: model)
 
