@@ -36,6 +36,7 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setConstraints()
+        setElements()
     }
     //MARK: - Methods
 
@@ -71,4 +72,14 @@ private extension MainViewController {
             bottomView.heightAnchor.constraint(equalToConstant: 160)
         ])
     }
+
+    func setElements() {
+        sendButton.addTarget(self, action: #selector(sendMessage), for: .touchUpInside)
+    }
+
+    @objc func sendMessage() {
+        showAlert(title: "Поздравляем!", message: "Ваша заявка успешно отправлена!")
+    }
+
+
 }
